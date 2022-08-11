@@ -46,7 +46,7 @@ class TransformerBlock(nn.Module):
         fed = self.ff(x)
         return self.norm2(fed + x)
 
-class Transformer(nn.Module):
+class TransformerEncoder(nn.Module):
     def __init__(self, k, heads, depth, seq_length, vocab_size, num_classes):
         super().__init__()
         self.vocab_size = vocab_size
